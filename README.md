@@ -5,6 +5,8 @@ Differences from TFTP are:
  - The string encoding type for the filename is not included in the RRQ/WRQ.
  - You can choose to randomly 'drop' 1% of the packets.
 
+`Client.java` contains the main method for the client side. Likewise `Server.java` contains the main method for the server side.
+
 Website showing the results can be found at: http://cs.oswego.edu/~tkamerma/CSC445/Project%202/
 
 Original Project Description:
