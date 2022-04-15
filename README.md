@@ -1,16 +1,19 @@
 # CSC445-Proj2-TFTP
-Simple File Transfer Protocal based on TFTP
+A simple File Transfer Protocal based on [TFTP](https://datatracker.ietf.org/doc/html/rfc1350).
+
 Differences from TFTP are:
- - Messages with OPCODE ERR are not sent in response to recieving a signal from another client, as I bind the server and client to each other
+ - Instead of using sequential ACKS, the program uses sliding windows.
+ - Messages with OPCODE ERR are not sent in response to recieving a message from another client, as I bind the server and client to each other and only read/write to that bound connection.
  - The string encoding type for the filename is not included in the RRQ/WRQ.
  - You can choose to randomly 'drop' 1% of the packets.
 
+
 `Client.java` contains the main method for the client side. Likewise `Server.java` contains the main method for the server side.
 
-Website showing the results can be found at: http://cs.oswego.edu/~tkamerma/CSC445/Project%202/
+Website showing the results can be found [here](http://cs.oswego.edu/~tkamerma/CSC445/Project%202/).
 
-Original Project Description:
-# Assignment 2
+## Original Project Description:
+### Assignment 2
 Write a file transfer program. To demonstrate, you'll need a client and a server program:
 
   - The server awaits connections.
